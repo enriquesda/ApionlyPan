@@ -1,0 +1,141 @@
+{
+    "info": {
+        "name": "Usuario API",
+        "description": "Colección para probar los métodos de la API de usuario",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Login",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost/api/usuario/login",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "path": ["api", "usuario", "login"]
+                },
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"email\": \"example@example.com\",\n    \"password\": \"password123\"\n}"
+                }
+            }
+        },
+        {
+            "name": "Crear Usuario",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost/api/usuario/nuevo",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "path": ["api", "usuario", "nuevo"]
+                },
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"nombre\": \"John Doe\",\n    \"email\": \"john@example.com\",\n    \"password\": \"password123\",\n    \"password_confirmation\": \"password123\",\n    \"rol\": \"usuario\"\n}"
+                }
+            }
+        },
+        {
+            "name": "Editar Usuario",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost/api/usuario/editar",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "path": ["api", "usuario", "editar"]
+                },
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"nombre\": \"John Updated\",\n    \"email\": \"john.updated@example.com\"\n}"
+                }
+            }
+        },
+        {
+            "name": "Cambiar Contraseña",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost/api/usuario/cambiarPass",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "path": ["api", "usuario", "cambiarPass"]
+                },
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"password\": \"newpassword123\",\n    \"password_confirmation\": \"newpassword123\"\n}"
+                }
+            }
+        },
+        {
+            "name": "Validar Usuario",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost/api/usuario/valido",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "path": ["api", "usuario", "valido"]
+                },
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\"\n}"
+                }
+            }
+        },
+        {
+            "name": "Eliminar Usuario",
+            "request": {
+                "method": "DELETE",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost/api/usuario/eliminar",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "path": ["api", "usuario", "eliminar"]
+                },
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"id\": 1\n}"
+                }
+            }
+        }
+    ]
+}
